@@ -27,7 +27,7 @@ endif
 set nobackup
 
 "tabs to spaces
-"set expandtab
+set expandtab
 
 "set tab size
 set tabstop=4 shiftwidth=4 softtabstop=4
