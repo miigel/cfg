@@ -16,11 +16,12 @@ call vundle#end()
 filetype plugin indent on
 "-------------------------------------------------------------------------------
 
-"color themes (different for vim and gvim)
+"visual stuff
 if has('gui_running')
-	color torte
+    color torte
+    set gfn=Monospace\ 9
 else
-	color torte
+    color torte
 endif
 
 "stop creating useless backup files that pollute your directory
