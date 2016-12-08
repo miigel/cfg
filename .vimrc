@@ -38,6 +38,9 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 "set searches to be case insensitive by default
 :set ignorecase
 
+"enable backspace
+set backspace=indent,eol,start
+
 "use os clipboard
 if has('clipboard') && !has('gui_running')
     if has('unnamed')
