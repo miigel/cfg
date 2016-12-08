@@ -51,5 +51,8 @@ if has('clipboard') && !has('gui_running')
     endif
 endif
 
-"YouCompleteMe: don't ask if it is safe to load the conf file
+"YouCompleteMe:
+"don't ask if it is safe to load the conf file
 let g:ycm_confirm_extra_conf = 0
+"disable preview window
+set completeopt-=preview
