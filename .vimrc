@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Townk/vim-autoclose'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
