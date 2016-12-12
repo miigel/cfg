@@ -42,6 +42,12 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 "enable backspace
 set backspace=indent,eol,start
 
+"better keymaps for split navigation
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
 "use os clipboard
 if has('clipboard') && !has('gui_running')
     if has('unnamed')
