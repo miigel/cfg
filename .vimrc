@@ -27,6 +27,9 @@ endif
 "stop creating useless backup files that pollute your directory
 set nobackup
 
+"set swapdir (linux) and make sure swap files are unique
+:set directory=~/.vim/swap//
+
 "tabs to spaces
 set expandtab
 
