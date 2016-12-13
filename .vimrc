@@ -42,6 +42,9 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 "set searches to be case insensitive by default
 :set ignorecase
 
+"enable mouse
+set mouse=a
+
 "enable backspace
 set backspace=indent,eol,start
 
