@@ -24,6 +24,10 @@ else
     color torte
 endif
 
+"status line
+set laststatus=2
+set statusline=%F%=%c\ %l/%L\ (%p%%)
+
 "stop creating useless backup files that pollute your directory
 set nobackup
 
