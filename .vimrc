@@ -19,7 +19,6 @@ filetype plugin indent on
 "visual stuff
 if has('gui_running')
     color torte
-    set gfn=Monospace\ 9
 else
     color torte
 endif
