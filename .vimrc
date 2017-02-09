@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
@@ -18,8 +19,6 @@ filetype plugin indent on
 
 "visual stuff
 if has('gui_running')
-    color torte
-else
     color torte
 endif
 
@@ -56,6 +55,10 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
+nnoremap <C-Left> <C-W><C-H>
+nnoremap <C-Down> <C-W><C-J>
+nnoremap <C-Up> <C-W><C-K>
+nnoremap <C-Right> <C-W><C-L>
 
 "use os clipboard
 if has('clipboard') && !has('gui_running')
@@ -72,3 +75,7 @@ endif
 let g:ycm_confirm_extra_conf = 0
 "disable preview window
 set completeopt-=preview
+
+"NERDtree
+"Keymap for toggling NERDtree
+map <C-n> :NERDTree .<CR>
