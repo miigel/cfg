@@ -10,17 +10,49 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Raimondi/delimitMate'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()
 filetype plugin indent on
 "-------------------------------------------------------------------------------
 
-"visual stuff
+"NERDtree
+"keymap for toggling NERDtree
+map <C-N> :call ToggleNERDTree()<CR>
+function! ToggleNERDTree()
+    if exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+        :NERDTreeClose
+    else
+        :NERDTree .
+    endif
+endfunction
+
+"Taglist
+"keymap for toggling Taglist
+map <C-M> :TlistToggle<CR>
+"taglist appears on the right side instead of left
+let Tlist_Use_Right_Window = 1
+"sort tags by name
+let Tlist_Sort_Type = "name"
+"disable fold column
+let Tlist_Enable_Fold_Column = 0
+"enable compact format
+let Tlist_Compact_Format = 1
+"set default window width
+let Tlist_WinWidth = 40
+"close vim if taglist is the only window left
+let Tlist_Exit_OnlyWindow = 1
+"disable line numbers in taglist
+autocmd FileType taglist set norelativenumber
+
+"gvim only
 if has('gui_running')
     color torte
 endif
+
+"allow switching between buffers without having to save changes in current buffer
+set hidden
 
 "status line
 set laststatus=2
@@ -30,7 +62,7 @@ set statusline=%F%=%c\ %l/%L\ (%p%%)
 set nobackup
 
 "set swapdir (linux) and make sure swap files are unique
-:set directory=~/.vim/swap//
+set directory=~/.vim/swap//
 
 "tabs to spaces
 set expandtab
@@ -39,10 +71,10 @@ set expandtab
 set tabstop=4 shiftwidth=4 softtabstop=4
 
 "relative line numbers with current line printed at 0
-:set number relativenumber
+set number relativenumber
 
 "set searches to be case insensitive by default
-:set ignorecase
+set ignorecase
 
 "enable mouse
 set mouse=a
@@ -50,32 +82,12 @@ set mouse=a
 "enable backspace
 set backspace=indent,eol,start
 
-"better keymaps for split navigation
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
+"keymaps for split navigation
 nnoremap <C-Left> <C-W><C-H>
 nnoremap <C-Down> <C-W><C-J>
 nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 
-"use os clipboard
-if has('clipboard') && !has('gui_running')
-    if has('unnamed')
-        :set clipboard=unnamed
-    endif
-    if has('unnamedplus')
-        :set clipboard=unnamedplus
-    endif
-endif
-
-"YouCompleteMe:
-"don't ask if it is safe to load the conf file
-let g:ycm_confirm_extra_conf = 0
-"disable preview window
-set completeopt-=preview
-
-"NERDtree
-"Keymap for toggling NERDtree
-map <C-n> :NERDTree .<CR>
+"keymaps for buffer navigation
+map <C-H> :bp<CR>
+map <C-J> :bn<CR>
