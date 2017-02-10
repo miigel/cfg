@@ -82,6 +82,9 @@ set mouse=a
 "enable backspace
 set backspace=indent,eol,start
 
+"don't wrap lines
+set nowrap
+
 "keymaps for split navigation
 nnoremap <C-Left> <C-W><C-H>
 nnoremap <C-Down> <C-W><C-J>
