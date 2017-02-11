@@ -12,6 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'ap/vim-buftabline'
+Plugin 'craigemery/vim-autotag'
 
 call vundle#end()
 filetype plugin indent on
@@ -27,6 +29,7 @@ function! ToggleNERDTree()
         :NERDTree .
     endif
 endfunction
+autocmd FileType nerdtree setlocal statusline=NERDTree
 
 "Taglist
 "keymap for toggling Taglist
@@ -41,10 +44,19 @@ let Tlist_Enable_Fold_Column = 0
 let Tlist_Compact_Format = 1
 "set default window width
 let Tlist_WinWidth = 40
+"disable resizing terminal window
+let Tlist_Inc_Winwidth = 0
 "close vim if taglist is the only window left
 let Tlist_Exit_OnlyWindow = 1
 "disable line numbers in taglist
 autocmd FileType taglist set norelativenumber
+autocmd FileType taglist setlocal statusline=TAGS
+
+"Buftabline
+"show buffer number
+let g:buftabline_numbers = 1
+"show buftabline only when there are 2 or more buffers
+let g:buftabline_show = 1
 
 "gvim only
 if has('gui_running')
