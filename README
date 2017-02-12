@@ -1,0 +1,21 @@
+# Vundle install:
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Vundle usage:
+:PluginInstall   # Install plugins
+:PluginClean     # Clean all unused plugins from bundle dir
+
+# Swap files:
+# Swap files are saved to ~/.vim/swap/ so this directory needs to be made
+mkdir ~/.vim/swap
+
+# Caps to esc:
+xmodmap -e "remove Lock = Caps_Lock"
+xmodmap -e "clear Lock"
+xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+xmodmap -pke > ~/.xmodmap
+echo "xmodmap .xmodmap" > ~/.xinitrc
+
+# You can optionally make a symlink to .vimrc instead of copying it from repo
+# folder to home dir
+ln -s path-to-.vimrc ~/.vimrc
