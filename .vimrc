@@ -11,7 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/taglist.vim'
+Plugin 'miigel/taglist.vim'
 Plugin 'ap/vim-buftabline'
 Plugin 'craigemery/vim-autotag'
 
