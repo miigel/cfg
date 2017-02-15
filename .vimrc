@@ -82,6 +82,10 @@ set expandtab
 "set tab size
 set tabstop=4 shiftwidth=4 softtabstop=4
 
+"highlight/indicate tabs, wrapping and trailing space
+set list
+set lcs=trail:~,tab:>-,extends:$,precedes:$
+
 "relative line numbers with current line printed at 0
 set number relativenumber
 
