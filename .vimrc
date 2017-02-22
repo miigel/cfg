@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'miigel/taglist.vim'
 Plugin 'ap/vim-buftabline'
 Plugin 'craigemery/vim-autotag'
+Plugin 'qpkorr/vim-bufkill'
 
 call vundle#end()
 filetype plugin indent on
