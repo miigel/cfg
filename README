@@ -16,6 +16,9 @@ xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 xmodmap -pke > ~/.xmodmap
 echo "xmodmap .xmodmap" > ~/.xinitrc
 
-# You can optionally make a symlink to .vimrc instead of copying it from repo
+# Edit ~/.profile and include profile file from repo
+. "path-to-profile-file-in-repo"
+
+# You can optionally make a symlink to vimrc instead of copying it from repo
 # folder to home dir
-ln -s path-to-.vimrc ~/.vimrc
+ln -s path-to-vimrc ~/.vimrc
