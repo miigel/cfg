@@ -30,7 +30,10 @@ function! ToggleNERDTree()
         :NERDTree .
     endif
 endfunction
+"replace the default statusline
 autocmd FileType nerdtree setlocal statusline=NERDTree
+"change current directory automatically with NERDtree
+let g:NERDTreeChDirMode = 2
 
 "Taglist
 "keymap for toggling Taglist
@@ -51,6 +54,7 @@ let Tlist_Inc_Winwidth = 0
 let Tlist_Exit_OnlyWindow = 1
 "disable line numbers in taglist
 autocmd FileType taglist set norelativenumber
+"replace the default statusline
 autocmd FileType taglist setlocal statusline=TAGS
 
 "Buftabline
@@ -109,5 +113,5 @@ nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 
 "keymaps for buffer navigation
-map <C-H> :bp<CR>
-map <C-J> :bn<CR>
+map <C-J> :bp<CR>
+map <C-K> :bn<CR>
