@@ -32,8 +32,6 @@ function! ToggleNERDTree()
 endfunction
 "replace the default statusline
 autocmd FileType nerdtree setlocal statusline=NERDTree
-"change current directory automatically with NERDtree
-let g:NERDTreeChDirMode = 2
 
 "Taglist
 "keymap for toggling Taglist
