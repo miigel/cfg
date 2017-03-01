@@ -41,8 +41,8 @@ let Tlist_Use_Right_Window = 1
 let Tlist_Sort_Type = "name"
 "disable fold column
 let Tlist_Enable_Fold_Column = 0
-"enable compact format
-let Tlist_Compact_Format = 1
+"show only current file's tags
+let Tlist_Show_One_File = 1
 "set default window width
 let Tlist_WinWidth = 40
 "disable resizing terminal window
