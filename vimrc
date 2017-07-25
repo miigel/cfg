@@ -66,6 +66,9 @@ if has('gui_running')
     color torte
 endif
 
+"make comments a bit brighter (default is pretty dark in terminal)
+highlight Comment ctermfg=12
+
 "allow switching between buffers without having to save changes in current buffer
 set hidden
 

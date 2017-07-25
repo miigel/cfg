@@ -1,3 +1,6 @@
+Vim:
+###############################################################################
+
 # Vundle install:
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
@@ -9,16 +12,4 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Swap files are saved to ~/.vim/swap/ so this directory needs to be made
 mkdir ~/.vim/swap
 
-# Caps to esc:
-xmodmap -e "remove Lock = Caps_Lock"
-xmodmap -e "clear Lock"
-xmodmap -e "keycode 66 = Escape NoSymbol Escape"
-xmodmap -pke > ~/.xmodmap
-echo "xmodmap .xmodmap" > ~/.xinitrc
-
-# Edit ~/.profile and include profile file from repo
-. "path-to-profile-file-in-repo"
-
-# You can optionally make a symlink to vimrc instead of copying it from repo
-# folder to home dir
-ln -s path-to-vimrc ~/.vimrc
+###############################################################################
