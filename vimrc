@@ -31,10 +31,12 @@ function! ToggleNERDTree()
 endfunction
 "replace the default statusline
 autocmd FileType nerdtree setlocal statusline=NERDTree
+"close when opening file
+let NERDTreeQuitOnOpen = 1
 
 "Taglist
 "keymap for toggling Taglist
-map <C-M> :TlistToggle<CR>
+map <C-P> :TlistToggle<CR>
 "taglist appears on the right side instead of left
 let Tlist_Use_Right_Window = 1
 "sort tags by name
@@ -49,6 +51,10 @@ let Tlist_WinWidth = 40
 let Tlist_Inc_Winwidth = 0
 "close vim if taglist is the only window left
 let Tlist_Exit_OnlyWindow = 1
+"close when selecting tag
+let TList_Close_On_Select = 1
+"move focus to taglist window when opening taglist
+let TList_GainFocus_On_ToggleOpen = 1
 "disable line numbers in taglist
 autocmd FileType taglist set norelativenumber
 "replace the default statusline
@@ -62,11 +68,17 @@ let g:buftabline_show = 1
 
 "gvim only
 if has('gui_running')
+    "base color theme
     color torte
-endif
 
-"make comments a bit brighter (default is pretty dark in terminal)
-highlight Comment ctermfg=12
+    "cursorline
+    set cursorline
+
+"terminal only
+else
+    "make comments a bit brighter (default is pretty dark in terminal)
+    highlight Comment ctermfg=12
+endif
 
 "allow switching between buffers without having to save changes in current buffer
 set hidden
@@ -111,3 +123,44 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
+
+"context lines
+set scrolloff=5
+
+"remove gvim menu, toolbar and scrollbars
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
+"colors
+highlight StatusLine guifg=Grey60 guibg=Grey10
+highlight StatusLineNC guifg=Grey30 guibg=Grey10
+highlight CursorLine guibg=Grey20 guifg=NONE
+highlight TabLine guifg=Grey10
+highlight Cursor guibg=Grey
+highlight LineNr guifg=red
+highlight CursorLineNr guifg=red
+highlight MatchParen guibg=Grey40
+highlight Directory guifg=#4070ff
+highlight Title guifg=#50ff50
+highlight Identifier guifg=#a0ff80
+highlight Type guifg=#60ff60
+highlight Statement guifg=#ff2020
+
+"use bash syntax highlighting for sh files
+let g:is_bash = 1
+
+"Disable arrow keys and PageUp/PageDown
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap <PageUp> <Nop>
+noremap <PageDown> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <PageUp> <Nop>
+inoremap <PageDown> <Nop>
