@@ -31,8 +31,6 @@ function! ToggleNERDTree()
 endfunction
 "replace the default statusline
 autocmd FileType nerdtree setlocal statusline=NERDTree
-"close when opening file
-let NERDTreeQuitOnOpen = 1
 
 "Taglist
 "keymap for toggling Taglist
@@ -123,6 +121,10 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
+nnoremap <C-Left> <C-W><C-H>
+nnoremap <C-Down> <C-W><C-J>
+nnoremap <C-Up> <C-W><C-K>
+nnoremap <C-Right> <C-W><C-L>
 
 "context lines
 set scrolloff=5
@@ -150,17 +152,3 @@ highlight Statement guifg=#ff2020
 
 "use bash syntax highlighting for sh files
 let g:is_bash = 1
-
-"Disable arrow keys and PageUp/PageDown
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-noremap <PageUp> <Nop>
-noremap <PageDown> <Nop>
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-inoremap <PageUp> <Nop>
-inoremap <PageDown> <Nop>
