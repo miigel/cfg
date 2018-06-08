@@ -1,0 +1,8 @@
+{
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.mouseWheelScrollSensitivity": 2,
+    "workbench.editor.tabSizing": "shrink",
+}
