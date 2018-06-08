@@ -12,4 +12,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Swap files are saved to ~/.vim/swap/ so this directory needs to be made
 mkdir ~/.vim/swap
 
+# Install flake8 for vim python syntax checking
+sudo apt-get install python-pip
+sudo pip install flake8
+
 ###############################################################################
