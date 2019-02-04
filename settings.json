@@ -5,4 +5,11 @@
     "workbench.startupEditor": "newUntitledFile",
     "editor.mouseWheelScrollSensitivity": 2,
     "workbench.editor.tabSizing": "shrink",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.insertFinalNewline": true,
+    "editor.rulers": [
+        100
+    ],
+    "explorer.confirmDelete": false,
+    "window.titleBarStyle": "native",
 }
