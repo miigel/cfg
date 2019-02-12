@@ -1,4 +1,13 @@
 {
+    // Windows specific
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "files.eol": "\n",
+
+    // Linux specific
+    "window.titleBarStyle": "native",
+
+    // Common
+
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "editor.minimap.enabled": false,
@@ -11,5 +20,4 @@
         100
     ],
     "explorer.confirmDelete": false,
-    "window.titleBarStyle": "native",
 }
