@@ -1,13 +1,4 @@
 {
-    // Windows specific
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "files.eol": "\n",
-
-    // Linux specific
-    "window.titleBarStyle": "native",
-
-    // Common
-
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "editor.minimap.enabled": false,
@@ -20,4 +11,12 @@
         100
     ],
     "explorer.confirmDelete": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.external.linuxExec": "xfce4-terminal",
+    "files.eol": "\n",
+    "window.titleBarStyle": "native",
+    "search.showLineNumbers": true,
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "python.linting.flake8Enabled": true,
 }
