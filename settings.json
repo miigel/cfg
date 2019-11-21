@@ -19,4 +19,5 @@
     "search.showLineNumbers": true,
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.linting.flake8Enabled": true,
+    "explorer.confirmDragAndDrop": false,
 }
