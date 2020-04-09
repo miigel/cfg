@@ -20,4 +20,21 @@
     "merge-conflict.autoNavigateNextConflict.enabled": true,
     "python.linting.flake8Enabled": true,
     "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": 0,
+    "editor.lineNumbers": "relative",
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"],
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-f>": false,
+        "<C-h>": false,
+        "<C-b>": false,
+    },
+    "vim.textwidth": 100,
 }
